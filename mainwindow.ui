@@ -11,7 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Dice Roller</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="applications-games"/>
   </property>
   <property name="statusTip">
    <string/>
@@ -46,7 +49,7 @@
      </size>
     </property>
     <property name="currentText">
-     <string>6</string>
+     <string>2</string>
     </property>
     <item>
      <property name="text">
@@ -328,7 +331,7 @@
      <x>0</x>
      <y>0</y>
      <width>387</width>
-     <height>30</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>
