@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>387</width>
-    <height>353</height>
+    <width>375</width>
+    <height>357</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -288,9 +288,9 @@
    <widget class="QLabel" name="labelResult">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>10</y>
-      <width>58</width>
+      <width>50</width>
       <height>18</height>
      </rect>
     </property>
@@ -301,9 +301,9 @@
    <widget class="QPlainTextEdit" name="txtResult">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>40</y>
-      <width>191</width>
+      <width>181</width>
       <height>261</height>
      </rect>
     </property>
@@ -314,7 +314,7 @@
    <widget class="QPlainTextEdit" name="txtTotal">
     <property name="geometry">
      <rect>
-      <x>225</x>
+      <x>230</x>
       <y>10</y>
       <width>131</width>
       <height>31</height>
@@ -324,13 +324,42 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QCheckBox" name="cbKeepLow">
+    <property name="geometry">
+     <rect>
+      <x>142</x>
+      <y>90</y>
+      <width>16</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>134</x>
+      <y>110</y>
+      <width>31</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Low</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>387</width>
+     <width>375</width>
      <height>23</height>
     </rect>
    </property>

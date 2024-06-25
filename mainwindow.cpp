@@ -116,7 +116,8 @@ void MainWindow::on_pbRoll_clicked()
                 ui->sbKeep->value(),
                 ui->cbAdd->currentText().toInt(),
                 ui->sbMin->value(),
-                ui->sbMax->value());
+                ui->sbMax->value(),
+                ui->cbKeepLow->isChecked());
     dr.rollDice();
     ui->txtTotal->setPlainText(QString::number(dr.getTotal()));
     ui->txtResult->setPlainText(dr.getResult());
