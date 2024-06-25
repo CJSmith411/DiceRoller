@@ -2,12 +2,12 @@
 #include <QRandomGenerator>
 
 DieRoller::DieRoller()
-    : DieRoller(2, 1, 1, 0, 1, 2)
+    : DieRoller(2, 1, 1, 0, 1, 2, false)
 {
 
 }
 
-DieRoller::DieRoller(int die, int num, int keep, int mod, int min, int max)
+DieRoller::DieRoller(int die, int num, int keep, int mod, int min, int max, bool keeplow)
 {
     this->d = die;
     this->n = num;
@@ -15,6 +15,7 @@ DieRoller::DieRoller(int die, int num, int keep, int mod, int min, int max)
     this->a = mod;
     this->min = min;
     this->max = max;
+    this->kl = keeplow;
     this->dice = QList<SingleDie>();
     this->result = "";
 }
@@ -28,13 +29,26 @@ void DieRoller::rollDice()
         sd.Roll();
         dice.append(sd);
     }
-    std::sort(
-        dice.begin(),
-        dice.end(),
-        [](SingleDie a, SingleDie b)
-        {
-            return a.getValue() > b.getValue();
-        });
+    if (k < n) {
+        if (kl) {
+            std::sort(
+                dice.begin(),
+                dice.end(),
+                [](SingleDie a, SingleDie b)
+                {
+                    return a.getValue() < b.getValue();
+                });
+        }
+        else {
+            std::sort(
+                dice.begin(),
+                dice.end(),
+                [](SingleDie a, SingleDie b)
+                {
+                    return a.getValue() > b.getValue();
+                });
+        }
+    }
     for(int i = 0; i < n; i++)
     {
         int dieValue = dice.at(i).getValue();

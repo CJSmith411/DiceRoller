@@ -8,10 +8,11 @@ class DieRoller
 {
 public:
     DieRoller();
-    DieRoller(int die, int num, int keep, int mod, int min, int max);
+    DieRoller(int die, int num, int keep, int mod, int min, int max, bool keeplow);
 
 private:
     int d, n, k, a, min, max;
+    bool kl;
     int total;
     QString result;
     QList<SingleDie> dice;
